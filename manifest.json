@@ -2,7 +2,7 @@
   "name": "Kids Chores Tracker",
   "short_name": "Chores Tracker",
   "description": "Track kids' chores and activities with easy logging. Monitor monthly earnings and motivate your children with reward-based task management.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
