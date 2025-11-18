@@ -2,25 +2,25 @@
   "name": "Kids Chores Tracker",
   "short_name": "Chores Tracker",
   "description": "Track kids' chores and activities with easy logging. Monitor monthly earnings and motivate your children with reward-based task management.",
-  "start_url": "./",
+  "start_url": "/chores-tracker-app/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/chores-tracker-app/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/icon-192.png",
+      "src": "/chores-tracker-app/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/chores-tracker-app/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
