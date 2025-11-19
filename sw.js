@@ -50,3 +50,51 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
+// Handle notification clicks
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  
+  // Focus or open the app when notification is clicked
+  event.waitUntil(
+    clients.matchAll({ 
+      type: 'window', 
+      includeUncontrolled: true 
+    }).then((clientList) => {
+      // If app is already open, focus it
+      for (let i = 0; i < clientList.length; i++) {
+        const client = clientList[i];
+        const url = new URL(client.url);
+        const origin = self.location.origin;
+        if (url.origin === origin && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      // If app is not open, open it
+      if (clients.openWindow) {
+        return clients.openWindow(self.location.origin);
+      }
+    })
+  );
+});
+
+// Handle push notifications (for future use with Push API)
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const title = data.title || 'New Notification';
+    const options = {
+      body: data.body || '',
+      icon: '/chores-tracker-app/icon.svg',
+      badge: '/chores-tracker-app/icon.svg',
+      vibrate: [200, 100, 200],
+      tag: data.tag || 'default',
+      requireInteraction: false,
+      ...data.options,
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(title, options)
+    );
+  }
+});
+

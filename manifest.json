@@ -7,12 +7,16 @@
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "portrait",
+  "gcm_sender_id": "103953800507",
+  "permissions": [
+    "notifications"
+  ],
   "icons": [
     {
       "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Crect width='512' height='512' rx='100' fill='%233b82f6'/%3E%3Cpath d='M256 128L280 200H360L296 248L320 320L256 272L192 320L216 248L152 200H232L256 128Z' fill='white'/%3E%3Ccircle cx='256' cy='256' r='180' fill='none' stroke='white' stroke-width='20' opacity='0.3'/%3E%3C/svg%3E",
       "sizes": "512x512",
       "type": "image/svg+xml",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }
